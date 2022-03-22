@@ -22,7 +22,11 @@ const AddMovieForm = (props) => {
     });
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.addMovie(movie);
+    push('/movies');
+  };
 
   const { title, director, genre, metascore, description } = movie;
   return (
